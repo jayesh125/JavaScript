@@ -1,0 +1,19 @@
+#btn2{
+    position: relative;
+    background-color: aqua;
+    margin-left: 50px;
+}
+
+.btn{
+    height: 30px;
+    width: auto;
+    text-align: center;
+}
+
+.main{
+    border: 5px solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    align-items: center;
+}

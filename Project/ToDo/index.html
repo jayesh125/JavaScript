@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .done{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="write">
+    <ul id="todolist" style="list-style: none;">
+
+    </ul>
+</body>
+<script src="script.js"></script>
+
+<script>
+let write = document.getElementById("write");
+let todolist = document.getElementById("todolist");
+
+write.addEventListener("keyup", function (e){
+    if (e.key == "Enter") {
+        addToDo(this.value);
+        this.value='' //for empty the input after enter
+    }
+
+    function addToDo(val){
+        let list = document.createElement("li");
+        list.innerHTML = `${val}`;
+        todolist.appendChild(list);
+        // console.log(val);
+
+        list.addEventListener("click", function(){
+            this.classList.toggle('done'); //Toggle the linethrough
+            this.style.color = "green"
+        })
+    }
+});
+</script>
+</html>
