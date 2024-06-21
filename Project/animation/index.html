@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Around Container</title>
+    <style>
+        #container {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(225, 183, 30);
+            position: relative;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        #inside {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            border: 2px solid black;
+            background-color: rgb(23, 141, 31);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="inside"></div>
+    </div>
+    <p>
+        <button onclick="myMove()">Click me to move</button>
+    </p>
+
+    <script>
+        function myMove() {
+            let elem = document.getElementById("inside");
+            let container = document.getElementById("container");
+            let containerWidth = container.clientWidth;
+            let containerHeight = container.clientHeight;
+            let elemWidth = elem.clientWidth;
+            let elemHeight = elem.clientHeight;
+
+            let pos = 0;
+            let direction = 0;
+            let id = setInterval(frame, 3);
+
+            function frame() {
+                if (direction === 0) {
+                    if (pos >= containerHeight - elemHeight - 2) {
+                        direction = 1;
+                        pos = 0;
+                    } else {
+                        pos++;
+                        elem.style.top = pos + 'px';
+                    }
+                } else if (direction === 1) {
+                    if (pos >= containerWidth - elemWidth - 2) {
+                        direction = 2;
+                        pos = 0;
+                    } else {
+                        pos++;
+                        elem.style.left = pos + 'px';
+                    }
+                } else if (direction === 2) {
+                    if (pos >= containerHeight - elemHeight - 2) {
+                        direction = 3;
+                        pos = 0;
+                    } else {
+                        pos++;
+                        elem.style.top = (containerHeight - elemHeight - 2 - pos) + 'px';
+                    }
+                } else if (direction === 3) {
+                    if (pos >= containerWidth - elemWidth - 2) {
+                        clearInterval(id);
+                    } else {
+                        pos++;
+                        elem.style.left = (containerWidth - elemWidth - 2 - pos) + 'px';
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
