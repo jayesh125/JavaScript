@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.full {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+nav {
+    background-color: orange;
+    align-self: start;
+    align-items: center;
+    width: 100%; 
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    color: rgb(255, 255, 255);
+    height: 8cqh;
+    transition: 0.5s;
+}
+
+nav h2{
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    font-weight: 700;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+nav h2 span {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(82, 54, 2);
+    padding: 0 2px;
+}
+
+nav ul {
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    font-size: 18px;
+    gap: 30px;
+    list-style: none;
+    transition: 0.5s;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.banner {
+    width: 100%;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    padding: 10px 10px;
+    transition: 0.5s;
+}
+
+.banner h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: rgb(66, 52, 6);
+}
+
+.banner p {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    margin: 30px 0;
+}
+.banner h2 span {
+    font-size: 50px;
+    font-weight: 700;
+    color: orange;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.cnt {
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border: solid 2px #ffbf0e;
+    display: flex;
+    background-color: orange;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.lchat{
+    width: 100px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 20px 0;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: black;
+}
+
+.cnt:hover, .lchat:hover {
+    background-color: #ffbf0e;
+}
+
+.cnt:active, .lchat:active {
+    background-color: #ff8f00;
+}
+
+.dayNight{
+    position: absolute;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(252, 169, 2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+.dayNight i:nth-child(2),
+.full.night .dayNight i:nth-child(1){
+    display: none;
+}
+.full.night .dayNight i:nth-child(2){
+    display: block;
+}
+.full.night {
+    background: #333;
+    color: white;
+}
+
+.full.night .cnt, 
+.full.night .lchat,
+.full.night nav,
+.full.night nav ul {
+    background-color: #555;
+    border-color: #777;
+    color: white;
+}
+
+.full.night nav ul li a,
+.full.night nav h2 span{
+    color: orange;
+}
+
+.full.night h2 span {
+    border-color: white;
+}
+
+.full.night .banner p,
+.full.night .banner h2{
+    color: white;
+}
