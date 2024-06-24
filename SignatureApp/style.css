@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top {
+    width: 100%;
+}
+
+.top p {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #495057;
+    text-align: center;
+}
+
+.top .form-control {
+    width: 100%;
+}
+
+.canvas {
+    border: 2px solid #343a40;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    cursor: crosshair;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.bottom {
+    width: 100%;
+}
+
+#clear, #download, #undo, #redo, #reset {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 5px 0;
+    width: 100%;
+}
+
+#clear:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+#download:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#undo:hover, #redo:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+#reset:hover {
+    background-color: #0d59a5;
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .top .form-control {
+        width: 200px;
+    }
+
+    #clear, #download, #undo, #redo, #reset {
+        width: auto;
+        margin: 0;
+    }
+}

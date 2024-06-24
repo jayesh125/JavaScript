@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Builder</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1508/1508843.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="top row d-flex justify-content-between mb-4">
+            <div class="text-color col-12 col-md-4 mb-3 mb-md-0">
+                <p>Text Color Picker</p>
+                <input type="color" id="colorPicker" class="d-flex form-control" title="color"/>
+            </div>
+            <div class="bg-color col-12 col-md-4 mb-3 mb-md-0">
+                <p>Background Color Picker</p>
+                <input type="color" id="bgColorPicker" class="d-flex form-control" title="color"/>
+            </div>
+            <div class="font-size col-12 col-md-4 mb-3 mb-md-0">
+                <p>Font Size</p>
+                <select id="fontSize" class="d-flex form-control" title="Font Size">
+                    <option value="5">5px</option>
+                    <option value="10">10px</option>
+                    <option value="15">15px</option>
+                    <option value="20">20px</option>
+                    <option value="25">25px</option>
+                    <option value="30">30px</option>
+                    <option value="35">35px</option>
+                    <option value="40">40px</option>
+                </select>
+            </div>
+        </div>
+        <canvas class="canvas mb-4" id="myCanvas"></canvas>
+        <div class="bottom row d-flex justify-content-around">
+            <button id="clear" type="button" class="btn btn-danger col-12 col-md-2">Clear</button>
+            <button id="download" type="button" class="btn btn-primary col-12 col-md-2"><i class="bi bi-download"></i> Download</button>
+            <button id="undo" type="button" class="btn btn-warning text-white col-12 col-md-2"><i class="bi bi-arrow-counterclockwise"></i> Undo</button>
+            <button id="redo" type="button" class="btn btn-warning text-white col-12 col-md-2"><i class="bi bi-arrow-clockwise"></i> Redo</button>
+            <button id="reset" type="button" class="btn btn-info text-white col-12 col-md-2"><i class="bi bi-arrow-repeat"></i> Retrieve Sign</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
